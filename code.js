@@ -8,10 +8,8 @@ function divideAndConquerSum(gArray)
 function divideArray(gArray, low, high)
 {
     if (high >= gArray.length) {return 0;}
-    if (high < low) { return 0;}
-    if (low == high) {
-        //console.log("adding index at ", low, "->", gArray[low]);
-        return gArray[low];}
+    if (high < low) { return 0; }
+    if (low == high) { return gArray[low];}
 
     var mid1 = Math.floor((high-low)/3 + low);
     var mid2 = Math.floor(2 * ((high-low) / 3) + low );
