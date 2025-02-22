@@ -26,20 +26,26 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Base case: $T(n) = 1$ if $n \leq 1$
-Recurrence case: $T(n) = 3T(n/3) + 3$ if $n \g 1$
+Base case: $T(n) = 1 if n \leq 1$
+Recurrence case: $T(n) = 3T(n/3) + 3 if n > 1$
 
 Solving:
 
 $T(n) = 3T(n/3) + 3$
-    $ = 3(3T((n/3)/3) + 3) + 3$
-    $ = 9T(n/9) + 6$
-    $ = 27T(n/27) + 9$
-    ...
-    $ = 3^i T(n/3^i) + 3i
+
+ $ = 3(3T((n/3)/3) + 3) + 3$
+    
+ $ = 9T(n/9) + 6$
+    
+ $ = 27T(n/27) + 9$
+    
+ ...
+ 
+ $ = 3^i T(n/3^i) + 3i
 
 for $i = log_3 n$
-    $ = nT(1) + 3log_3 n = n + log_3 n ∈ Θ(n) 
+
+ $ = nT(1) + 3log_3 n = n + log_3 n ∈ Θ(n) 
 
 ### Sources
 
