@@ -26,5 +26,26 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
+Base case: $T(n) = 1$ if $n \leq 1$
+Recurrence case: $T(n) = 3T(n/3) + 3$ if $n \g 1$
 
-https://www.geeksforgeeks.org/3-way-merge-sort/
+Solving:
+
+$T(n) = 3T(n/3) + 3$
+    $ = 3(3T((n/3)/3) + 3) + 3$
+    $ = 9T(n/9) + 6$
+    $ = 27T(n/27) + 9$
+    ...
+    $ = 3^i T(n/3^i) + 3i
+
+for $i = log_3 n$
+    $ = nT(1) + 3log_3 n = n + log_3 n ∈ Θ(n) 
+
+### Sources
+
+I used this link to help turn my merge function from 2 way into 3 way: https://www.geeksforgeeks.org/3-way-merge-sort/
+
+I received help from the professor Lars Kothoff for how my return recursions should be set up. I also reviewed the slides concerning mergesort 
+for my base code and how to solve for the run time analysis.
+
+“I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.” - Natalie Sleight
