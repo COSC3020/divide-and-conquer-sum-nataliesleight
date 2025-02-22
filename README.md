@@ -26,8 +26,9 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Base case: $T(n) = 1 if n \leq 1$
-Recurrence case: $T(n) = 3T(n/3) + 3 if n > 1$
+Base case: $T(n) = 1$ if $n \leq 1$
+
+Recurrence case: $T(n) = 3T(n/3) + 3$ if $n > 1$
 
 Solving:
 
